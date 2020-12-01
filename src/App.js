@@ -51,17 +51,17 @@ class App extends Component{
   unsubscribeFromAuth = null;
 
   componentDidMount(){
+    const { setCurrentUser } = this.props;
+
     this.unsubscribeFromAuth = auth.onAuthStateChanged(async userAuth => {
       if(userAuth){
           const userRef = await createUserProfileDocument(userAuth);
 
-          userRef.onSnapshot((snapshot) => {
+          userRef.onSnapshot(snapshot => {
               setCurrentUser({
-                currentUser : {
                   id : snapshot.id,
                   ...snapshot.data()
-                }
-              } );
+                });
           });
       }
 
