@@ -3,6 +3,7 @@ import './App.css';
 import HomePage from './pages/homepage/homepage.component'
 import ShopPage from './pages/shop/shop.component'
 import Header from './components/header/header.component' 
+import CheckoutPage from './pages/checkout/checkout.component'
 import { 
   Route,
   Switch,
@@ -84,6 +85,7 @@ class App extends Component{
           <Switch>
               <Route exact path='/' component={HomePage} />
               <Route exact path='/shop' component={ShopPage} />
+              <Route exact path='/checkout' component={CheckoutPage} />
               <Route exact path='/signin' render={() => 
                   this.props.currentUser ? (
                     <Redirect to='/' />
