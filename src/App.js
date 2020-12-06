@@ -11,6 +11,8 @@ import {
 } from 'react-router-dom'
 import { auth,createUserProfileDocument } from './firebase/firebase.utils'
 import SignInAndSignUpPage from './pages/signin-signup/signin-signup.component';
+import { createStructuredSelector } from 'reselect'
+import { selectCurrentUser } from "./redux/user/user.selectors";
 import { setCurrentUser } from './redux/user/user.actions';
 import { connect } from 'react-redux'
 
@@ -100,11 +102,10 @@ class App extends Component{
       
     );
   }
-  
 }
 
-const mapStateToProps = ({ user }) => ({
-  currentUser : user.currentUser
+const mapStateToProps = createStructuredSelector({
+  currentUser : selectCurrentUser
 })
 
 const mapDispatchToProps = dispatch => ({
