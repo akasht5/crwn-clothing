@@ -7,7 +7,6 @@ import CheckoutPage from './pages/checkout/checkout.component'
 import { 
   Route,
   Switch,
-  Link,
   Redirect
 } from 'react-router-dom'
 import { auth,createUserProfileDocument } from './firebase/firebase.utils'
@@ -16,39 +15,6 @@ import { createStructuredSelector } from 'reselect'
 import { selectCurrentUser } from "./redux/user/user.selectors";
 import { setCurrentUser } from './redux/user/user.actions';
 import { connect } from 'react-redux'
-
-const Hats = (props) => {
-  return (
-    <div>
-        <h1>Hats</h1>
-        <Link to={`${props.match.url}/1`}>Hat 1</Link><br/>
-        <Link to={`${props.match.url}/100`}>Hat 100</Link>
-    </div>
-    
-)}
-
-const Hat = ({ match }) => {
-  return (
-    <h1>This is hat no :{match.params.hatid}</h1>
-    
-  )
-}
-const Jackets = () => {
-    return <h1>Jackets</h1>
-}
-
-const Sneakers = () => {
-    return <h1>Sneakers</h1>
-}
-
-const Womens = () => {
-  return <h1>Womens</h1>
-}
-
-const Mens = () => {
-  return <h1>Mens</h1>
-}
-
 
 
 class App extends Component{
@@ -93,12 +59,7 @@ class App extends Component{
                     <SignInAndSignUpPage />
                   )
               } />
-              <Route exact path='/hats' component={Hats} />
-              <Route exact path='/hats/:hatid' component={Hat} />
-              <Route exact path='/jackets' component={Jackets} />
-              <Route exact path='/sneakers' component={Sneakers} />
-              <Route exact path='/womens' component={Womens} />
-              <Route exact path='/mens' component={Mens} />
+              
           </Switch>   
        </div>
       
