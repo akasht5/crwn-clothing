@@ -2,6 +2,7 @@ import React,{ Component } from 'react';
 import './App.css';
 import HomePage from './pages/homepage/homepage.component'
 import ShopPage from './pages/shop/shop.component'
+import ContactPage from './pages/contact/contact.component'
 import Header from './components/header/header.component' 
 import CheckoutPage from './pages/checkout/checkout.component'
 import { 
@@ -49,6 +50,7 @@ class App extends Component{
           <Header />
           <Switch>
               <Route exact path='/' component={HomePage} />
+              <Route exact path='/contact' component={ContactPage} />
               <Route path='/shop' component={ShopPage} />
               <Route exact path='/checkout' component={CheckoutPage} />
               <Route exact path='/signin' render={() => 
