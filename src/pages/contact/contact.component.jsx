@@ -3,7 +3,7 @@ import React,{ Component } from 'react'
 import InputButton from '../../components/form-input/form-input.component'
 import CustomButton from '../../components/custom-button/custom-button.component'
 
-import './contact.styles.scss'
+import { ContactDescriptionContainer, ContactFormContainer, ContactPageContainer, SubmitButtonContainer } from './contact.styles';
 
 class ContactPage extends Component{
     constructor(){
@@ -15,8 +15,6 @@ class ContactPage extends Component{
             enquiryType : '',
             message : ''
         };
-
-        
     }
 
     handleChange = (e) => {
@@ -28,10 +26,10 @@ class ContactPage extends Component{
 
     render(){
         return (
-            <div className="contactpage">
+            <ContactPageContainer>
                 <h2 class="title">CONTACT US</h2>
-                <p class="description">Have a question about CRWN Clothing, our threads or your order ? Let us know below and our crew will get back to as soon as possible ( typically within 2 bussiness days )</p>
-                <form>
+                <ContactDescriptionContainer>Have a question about CRWN Clothing, our threads or your order ? Let us know below and our crew will get back to as soon as possible ( typically within 2 bussiness days )</ContactDescriptionContainer>
+                <ContactFormContainer>
                 <InputButton
                 type="text"
                 name="name"
@@ -69,15 +67,14 @@ class ContactPage extends Component{
                 handleChange={this.handleChange}
                 required
                 />
-                <div className="submitButton">
+                <SubmitButtonContainer>
                     <CustomButton
                     type="submit"
                     value="Submit"
                     >Send Message</CustomButton>
-                </div>
-                
-                </form>
-        </div>
+                </SubmitButtonContainer>
+                </ContactFormContainer>
+        </ContactPageContainer>
         )
     }
 }
