@@ -5,7 +5,9 @@ import { CollectionPreviewContainer,TitleContainer,PreviewContainer } from './co
 const CollectionPreview = ({ title,items }) => {
     return (
         <CollectionPreviewContainer>
-            <TitleContainer>{title.toUpperCase()}</TitleContainer>
+            <TitleContainer>
+                {title}
+            </TitleContainer>
             <PreviewContainer>
                 {items
                     .filter((item,index) => index < 4 )
