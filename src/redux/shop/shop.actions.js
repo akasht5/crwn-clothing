@@ -9,7 +9,7 @@ export const updateCollections = (collection) => ({
 export const fetchCollectionsStart = () => ({
     type : ShopActionTypes.FETCH_COLLECTIONS_START
 })
-
+ 
 export const fetchCollectionsSuccess = collectionsMap => ({
     type : ShopActionTypes.FETCH_COLLECTIONS_SUCCESS,
     payload : collectionsMap

@@ -27,7 +27,7 @@ class ContactPage extends Component{
     render(){
         return (
             <ContactPageContainer>
-                <h2 class="title">CONTACT US</h2>
+                <h2 className="title">CONTACT US</h2>
                 <ContactDescriptionContainer>Have a question about CRWN Clothing, our threads or your order ? Let us know below and our crew will get back to as soon as possible ( typically within 2 bussiness days )</ContactDescriptionContainer>
                 <ContactFormContainer>
                 <InputButton
