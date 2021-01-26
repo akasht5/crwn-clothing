@@ -3,7 +3,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import CollectionItem from '../../components/collection-item/collection-item.component'
 import { selectCollection } from '../../redux/shop/shop.selectors'
-import { CollectionItems, CollectionPageContainer, CollectionTitle } from './collection.styles'
+import { CollectionItemsContainer, CollectionPageContainer, CollectionTitle } from './collection.styles'
 
 const CollectionPage = ({ collection }) => {
     const { title,items } = collection;
@@ -11,12 +11,12 @@ const CollectionPage = ({ collection }) => {
     return (
         <CollectionPageContainer>
             <CollectionTitle>{title}</CollectionTitle>
-            <CollectionItems>
+            <CollectionItemsContainer>
                 {
                     items.map(item => 
                     <CollectionItem key={item.id} item={item} />)
                 }
-            </CollectionItems>
+            </CollectionItemsContainer>
         </CollectionPageContainer>
     )
 }

@@ -13,7 +13,7 @@ export function* fetchCollectionsAsync(){
         yield put(fetchCollectionsFailure(error.message));
     }
 }
-
+    
 export function* onFetchCollectionsStart(){
     yield takeEvery(ShopActionTypes.FETCH_COLLECTIONS_START,fetchCollectionsAsync);
 }
