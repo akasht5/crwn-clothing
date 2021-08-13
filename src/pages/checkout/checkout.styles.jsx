@@ -6,13 +6,20 @@ export const CheckoutContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 50px auto 0;
+    margin: 50px 0;
     margin-bottom:200px; 
 
     button{
         margin-left:auto;
         margin-top:50px;
-    }   
+    }
+    
+    @media screen and (max-width:800px){
+        width:83vw;
+        margin:0 10px;
+        margin-top:50px;
+        margin-bottom:100px;
+    }
 `;
 
 export const CheckoutHeaderContainer = styled.div`

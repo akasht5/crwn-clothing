@@ -10,7 +10,6 @@ import { HeaderContainer,LogoContainer,OptionsContainer,OptionLink }from './head
 import { signOutStart } from '../../redux/user/user.actions'
 
 const Header = ({ currentUser,hidden,signOutStart }) => {
-
     return (
         <HeaderContainer>
             <LogoContainer to='/'>
@@ -30,7 +29,7 @@ const Header = ({ currentUser,hidden,signOutStart }) => {
                 <CartIcon />
             </OptionsContainer>
             {
-                hidden ? null : <CartDropdown />
+                hidden ? null : <CartDropdown data-test="cartdropdown" />
             }
             
         </HeaderContainer>
