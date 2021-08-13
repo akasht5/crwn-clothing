@@ -2,10 +2,15 @@
   "name": "crwn-clothing",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "14.17.3",
+    "npm": "7.19.0"
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
+    "create-react-app": "^4.0.3",
     "firebase": "^8.0.2",
     "node-sass": "^4.14.1",
     "react": "^16.13.1",
